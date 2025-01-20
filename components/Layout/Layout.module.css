@@ -1,0 +1,13 @@
+/* Layout.module.css */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el layout ocupe toda la altura de la pantalla */
+}
+
+.main {
+    flex: 1; /* Permite que el contenido principal se expanda para llenar el espacio disponible */
+    padding: 2rem; /* Espacio interno alrededor del contenido principal */
+    max-width: 1200px; /* Ancho máximo del contenido principal */
+    margin: 0 auto; /* Centra el contenido principal */
+}

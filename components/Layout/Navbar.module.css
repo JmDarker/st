@@ -1,0 +1,98 @@
+/* Navbar.module.css */
+
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 1rem 0;
+    position: sticky; /* Para que la barra de navegación se mantenga fija al hacer scroll */
+    top: 0;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+    color: #007bff;
+}
+
+/* Estilos para el menú hamburguesa en pantallas pequeñas */
+.menuIcon {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú abierto (clases dinámicas) */
+.menuIcon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menuIcon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menuIcon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.navLinks.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de tu navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navLinks.active li {
+    padding: 0.5rem 0;
+}
+
+/* Media query para responsive design */
+@media (max-width: 768px) {
+    .navLinks {
+        display: none; /* Oculta los enlaces en pantallas pequeñas */
+    }
+
+    .menuIcon {
+        display: block; /* Muestra el icono de menú */
+    }
+}

@@ -1,0 +1,54 @@
+/* ServiceCard.module.css */
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Evita que la imagen se desborde */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: white; /* Fondo blanco */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Aspect ratio 4:3. Ajusta según tu necesidad */
+    overflow: hidden;
+}
+
+.cardImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.cardTitle {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.cardDescription {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    .imageContainer {
+        padding-bottom: 60%; /* Aspect ratio ajustado para pantallas más pequeñas */
+    }
+}

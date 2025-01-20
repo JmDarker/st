@@ -1,0 +1,117 @@
+/* Button.module.css */
+
+.button {
+    display: inline-block; /* Para que se comporte como un elemento en línea pero con propiedades de bloque */
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.25rem; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  }
+  
+  /* Variantes de botones */
+  
+  .primary {
+    background-color: #007bff; /* Azul */
+    color: white;
+  }
+  
+  .secondary {
+    background-color: #6c757d; /* Gris */
+    color: white;
+  }
+  
+  .success {
+    background-color: #28a745; /* Verde */
+    color: white;
+  }
+  
+  .danger {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+  }
+  
+  .warning {
+    background-color: #ffc107; /* Amarillo */
+    color: #212529; /* Color de texto oscuro para contraste */
+  }
+  
+  /* Tamaños de botones */
+  
+  .small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .large {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Estados de los botones */
+  
+  .button:hover {
+    transform: translateY(-2px); /* Ligero desplazamiento hacia arriba al pasar el mouse */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  }
+  
+  .primary:hover {
+      background-color: #0069d9;
+  }
+  
+  .secondary:hover {
+      background-color: #5a6268;
+  }
+  
+  .success:hover {
+      background-color: #218838;
+  }
+  
+  .danger:hover {
+      background-color: #bd2130;
+  }
+  
+  .warning:hover {
+      background-color: #e0a800;
+  }
+  
+  .button:active {
+    transform: translateY(0); /* Sin desplazamiento al hacer clic */
+    box-shadow: none;
+  }
+  
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Estilos para botones Outline (solo borde) */
+  .outline {
+      background-color: transparent;
+      border: 2px solid #007bff; /* Color del borde */
+      color: #007bff; /* Color del texto */
+  }
+  
+  .outline:hover {
+      background-color: #e0f2ff; /* Color de fondo al pasar el mouse */
+      border-color: #0056b3; /* Color del borde al pasar el mouse */
+      color: #0056b3;
+      transform: translateY(-2px); /* Ligero desplazamiento hacia arriba al pasar el mouse */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  }
+  
+  .outline:active {
+      transform: translateY(0); /* Sin desplazamiento al hacer clic */
+      box-shadow: none;
+  }
+  
+  .outline:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      border-color: #ced4da; /* Color del borde cuando está deshabilitado */
+      color: #ced4da;
+  }
